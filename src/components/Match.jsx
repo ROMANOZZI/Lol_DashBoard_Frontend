@@ -34,8 +34,8 @@ const Match = () => {
 
   if (error) {
     return (
-      <div style={{ color: 'red', textAlign: 'center', padding: '20px' }}>
-        Error loading match data: {error.message}
+      <div style={{ color: 'red', textAlign: 'center', padding: '20px', fontSize:'40px', margin:'auto' }}>
+        Error loading match data: {error}
       </div>
     );
   }
