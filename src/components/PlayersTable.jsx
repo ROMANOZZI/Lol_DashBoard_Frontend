@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router';
 const PlayerTable = ({ players }) => {
   return (
     <div style={styles.container}>
@@ -29,6 +29,11 @@ const PlayerTable = ({ players }) => {
               <td style={styles.cell}>{player.assists}</td>
               <td style={styles.cell}>{player.totalDamageDealtToChampions}</td>
               <td style={styles.cell}>{player.killParticipation + '%'}</td>
+              <td 
+               className=''
+              ><button className='bg-red-800 hover:bg-white hover:text-red-800 cursor-pointer
+               rounded-xl
+              '><Link to={'/MVP'} state={{player:player}}>Show stats</Link></button></td>
             </tr>
           ))}
         </tbody>
